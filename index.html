@@ -1,70 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Venkatesh Swarna | Data Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="venkatesh.jpg" alt="Venkatesh Swarna" class="profile-pic" />
-    <h1>Venkatesh Swarna</h1>
-    <p>AWS Certified Data Engineer | Python | Spark | Airflow | SQL</p>
 
-    <div class="strengths">
-      <span class="strength">Restorative</span>
-      <span class="strength">Adaptability</span>
-      <span class="strength">Individualization</span>
-      <span class="strength">Activator</span>
-      <span class="strength">Positivity</span>
+  <!-- Dark Mode Toggle -->
+  <button class="btn btn-light toggle-mode" onclick="toggleTheme()">🌗</button>
+
+  <!-- Hero -->
+  <div class="hero text-center text-white">
+    <img src="venkatesh.jpg" alt="Venkatesh Swarna" class="profile-img mb-3">
+    <h1 class="fw-bold">Venkatesh Swarna</h1>
+    <p class="lead">AWS Certified Data Engineer | Python | Spark | Airflow | SQL</p>
+
+    <!-- CliftonStrengths -->
+    <div class="mb-2">
+      <span class="badge rounded-pill badge-strength">Restorative</span>
+      <span class="badge rounded-pill badge-strength">Adaptability</span>
+      <span class="badge rounded-pill badge-strength">Individualization</span>
+      <span class="badge rounded-pill badge-strength">Activator</span>
+      <span class="badge rounded-pill badge-strength">Positivity</span>
     </div>
-    <p><a class="report-link" href="CliftonStrengths 34 Report.pdf" target="_blank">🔗 View Full CliftonStrengths Report</a></p>
-  </header>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+    <div class="mt-3">
+      <a href="CliftonStrengths 34 Report.pdf" target="_blank" class="btn btn-outline-light btn-sm">📖 View CliftonStrengths Report</a>
+      <a href="Venkatesh_Swarna_Resume.pdf" download class="btn btn-warning btn-sm ms-2">⬇️ Download Resume</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Venkatesh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navItems">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certs">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <section id="about">
+  <!-- About -->
+  <section class="container my-5" id="about">
     <h2>About Me</h2>
-    <p>I am a passionate Data Engineer pursuing MS in Data Science at the University of New Haven. I specialize in building scalable data pipelines, cloud-based infrastructure, and automating ETL workflows using Python, Spark, AWS, and Airflow.</p>
+    <p>I’m a passionate Data Engineer pursuing my MS in Data Science at the University of New Haven. I specialize in building scalable data pipelines, cloud-native infrastructure, and automating ETL workflows using Python, Spark, AWS, and Airflow.</p>
   </section>
 
-  <section id="projects">
+  <!-- Projects -->
+  <section class="container my-5" id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong><a href="https://github.com/Venkatesh-Swarna/StockMarketPriceAnalysis">Stock Market Price Analysis</a>:</strong> Real-time Kafka + AWS Glue pipeline visualized in Power BI.</li>
-      <li><strong><a href="https://github.com/Venkatesh-Swarna/USAccidentsProject">US Accidents Severity Prediction</a>:</strong> ML model to predict accident severity with EDA and deployment.</li>
-      <li><strong><a href="https://github.com/Venkatesh-Swarna/CorrosionClassification">Corrosion Detection (YOLOv5)</a>:</strong> Object detection pipeline for industrial corrosion classification.</li>
+      <li><a href="https://github.com/Venkatesh-Swarna/StockMarketPriceAnalysis" target="_blank"><strong>Stock Market Price Analysis</strong></a>: Real-time Kafka + AWS Glue pipeline visualized in Power BI.</li>
+      <li><a href="https://github.com/Venkatesh-Swarna/USAccidentsProject" target="_blank"><strong>US Accidents Severity Prediction</strong></a>: ML model to predict accident severity using EDA and deployment.</li>
+      <li><a href="https://github.com/Venkatesh-Swarna/CorrosionClassification" target="_blank"><strong>Corrosion Detection (YOLOv5)</strong></a>: Object detection pipeline for industrial corrosion classification.</li>
     </ul>
   </section>
 
-  <section id="certifications">
-  <h2>Certifications</h2>
-  <ul>
-    <li>AWS Certified Data Engineer – Associate</li>
-    <li>Microsoft Azure Fundamentals (AZ-900)</li>
-  </ul>
-  <p>
-    🔗 <strong><a href="https://www.credly.com/users/venkatesh-swarna.75ea7ecb/badges#credly" target="_blank">
-    View My Verified Certifications on Credly</a></strong>
-  </p>
-</section>
+  <!-- Certifications -->
+  <section class="container my-5" id="certs">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Certified Data Engineer – Associate</li>
+      <li>Microsoft Azure Fundamentals (AZ-900)</li>
+    </ul>
+    <a href="https://www.credly.com/users/venkatesh-swarna.75ea7ecb/badges#credly" target="_blank" class="btn btn-outline-primary btn-sm">🧾 View Verified Credly Badges</a>
+  </section>
 
-
-  <section id="contact">
+  <!-- Contact -->
+  <section class="container my-5" id="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:venkatesh.swarna.vs@gmail.com">venkatesh.swarna.vs@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/venkatesh-swarna-ab686a12a" target="_blank">venkatesh-swarna-ab686a12a</a></p>
     <p>GitHub: <a href="https://github.com/Venkatesh-Swarna" target="_blank">Venkatesh-Swarna</a></p>
   </section>
 
-  <footer>
-    <p>© 2025 Venkatesh Swarna | Built with HTML & CSS</p>
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>© 2025 Venkatesh Swarna | Built with HTML, Bootstrap & ❤️</p>
   </footer>
+
+  <!-- Bootstrap JS & Dark Mode -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.setAttribute('data-bs-theme', html.getAttribute('data-bs-theme') === 'light' ? 'dark' : 'light');
+    }
+  </script>
+
 </body>
 </html>
